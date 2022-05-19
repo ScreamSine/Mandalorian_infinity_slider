@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(silver, rgb(107, 93, 93));
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-rows: 160px 1fr 1fr;
+}
+
+header {
+  grid-area: header;
+}
+
+.container {
+  border: 4px solid navy;
+  width: 600px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 3px gray;
+  overflow: hidden;
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.line {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation-name: anime;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  
+}
+
+.a,
+.b,
+.c,
+.d,
+.e {
+  background-size: 100%;
+  width: 600px;
+  height: 100%;
+  position: absolute;
+}
+
+.a {
+  background-image: url(./img/1.jpg);
+}
+
+.b {
+  background-image: url(./img/2.jpg);
+  left: 600px;
+}
+
+.c {
+  background-image: url(./img/3.jpg);
+  left: 1200px;
+}
+
+.d {
+  background-image: url(./img/4.jpg);
+  left: 1800px;
+}
+
+.e {
+  background-image: url(./img/5.jpg);
+  left: 2400px;
+}
+
+@keyframes anime {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: -1200px;
+  }
+  50% {
+    left: -2400px;
+    filter: contrast(110%);
+  }
+  75% {
+    left: -1200px;
+  }
+  100% {
+    left: 0px;
+  }
+}
