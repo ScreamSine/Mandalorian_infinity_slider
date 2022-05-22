@@ -4,28 +4,19 @@
 
 body {
   background-image: linear-gradient(silver, rgb(107, 93, 93));
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
-  grid-template-rows: 160px 1fr 1fr;
-}
-
-header {
-  grid-area: header;
+  height: 100vh;
 }
 
 .container {
   border: 4px solid navy;
   width: 600px;
   height: 300px;
-  margin: 40px auto;
+  margin: 0px auto;
   border-radius: 10px;
   box-shadow: 1px 1px 8px 3px gray;
   overflow: hidden;
-  grid-area: main;
+  position: relative;
+  top: 250px;
 }
 
 footer {
@@ -42,11 +33,7 @@ footer {
   
 }
 
-.a,
-.b,
-.c,
-.d,
-.e {
+.line > div {
   background-size: 100%;
   width: 600px;
   height: 100%;
